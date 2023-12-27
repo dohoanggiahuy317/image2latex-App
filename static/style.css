@@ -1,0 +1,333 @@
+html,
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/static/images/bg.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.wrapper {
+  background-color: #242424e7;
+  border-radius: 8px;
+  min-height: 95%;
+  width: 95%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.form {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  align-items: center;
+  /* justify-content: space-between; */
+  border: none;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  width: 15rem;
+  margin: 10px;
+  color: #fff;
+  background: #1fb264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824b;
+  transition: all 0.2s ease;
+  outline: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Arbutus Slab";
+}
+
+label:hover {
+  background: #1aa059;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.file-submit-btn {
+  cursor: pointer;
+  width: 10rem;
+  margin: 10px;
+  color: #fff;
+  background: #1fb264;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #15824b;
+  transition: all 0.2s ease;
+  outline: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Arbutus Slab";
+}
+
+.file-submit-btn:hover {
+  background: #1aa059;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#tutorial {
+  font-family: "Arbutus Slab";
+  font-size: small;
+  text-align: center;
+  width: 100%;
+  margin: 1rem 0 0 0;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #1fb264;
+  position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #1fb264;
+  border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #15824b;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 400px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all 0.2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Arbutus Slab";
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all 0.2s ease;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.result_wrapper {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result_wrapper h2 {
+  padding: 1rem 2rem 1rem 2rem;
+  border-top: dashed white;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Arbutus Slab";
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.copy-text {
+  position: relative;
+  padding: 10px;
+  margin: 20px 0 20px 0;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.text-div {
+  position: relative;
+  color: black;
+  width: 85%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-family: "Antic Didone";
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.copy-text button {
+  padding: 10px;
+  background: #5784f5;
+  color: #fff;
+  width: auto;
+  height: auto;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.copy-text button:hover {
+  transition: 0.2s;
+  background: #2c67fc;
+}
+
+.copy-text button:active {
+  background: #809ce2;
+}
+.copy-text button:before {
+  content: "Copied";
+  position: absolute;
+  top: -45px;
+  right: 0px;
+  background: #5c81dc;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  display: none;
+}
+.copy-text button:after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  background: #5c81dc;
+  transform: rotate(45deg);
+  display: none;
+}
+.copy-text.active button:before,
+.copy-text.active button:after {
+  display: block;
+}
+
+/* ------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------  */
+
+.header {
+  /* position: absolute; */
+  /* bottom: 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+.header a {
+  color: white;
+  margin: 0 1rem 1rem 1rem;
+  text-decoration: none;
+  font-family: "Arbutus Slab";
+  cursor: pointer;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

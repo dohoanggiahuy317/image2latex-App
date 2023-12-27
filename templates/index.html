@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Antic Didone' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Birthstone Bounce' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=BIZ UDPMincho' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Bonbon' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 id="title">
+            <span style="font-family: 'Birthstone Bounce';font-size:150%;">Image</span>
+            <span style="font-family: 'Bonbon';font-size:250%;">2</span>
+            <span style="font-family: 'BIZ UDPMincho';font-size:150%;">LaTex</span>
+        </h1>
+        <div class="header">
+            <span>
+                <a class="hover-underline-animation" href="https://github.com/dohoanggiahuy317">GitHub</a> 
+                <a class="hover-underline-animation" href="mailto:do_g1@denison.edu">JaWeee Do</a> 
+                <a class="hover-underline-animation" href="https://www.linkedin.com/in/do-hoang-gia-huy-bbb05921b/">LinkedIn</a>
+            </span>
+        </div>
+        <form id="submit_form" method="post" enctype="multipart/form-data" class="form">
+            <label form="file">Choose an image
+                <input type="file" name="file" accept=".jpg, .jpeg, .png" onchange="readURL(this)">
+            </label>
+
+            <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" />
+                <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="remove-image">
+                        Remove <span class="image-title">Uploaded Image</span>
+                    </button>
+                </div>
+            </div>
+
+            <button class="file-submit-btn" type="submit">Upload</button>
+        </form>
+        <div id="tutorial">Hang tight for 2-3 minutes while the model puts on its best hustle moves for your image – it's getting ready to dance its pixels off! 🕺😄</div>
+
+        {% if result %}
+        <div class="result_wrapper">
+            <h2>Model prediction</h2>
+            <img class="file-upload-image" src="data:image/jpeg;base64,{{ img_data }}" alt="Uploaded Image">
+
+            <div class="copy-text">
+                <div class="text-div" >{{ result }}</div>
+                <button><i class="fa fa-clone"></i></button>
+            </div>
+
+        </div>
+        {% endif %}
+
+
+    </div>
+
+
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+
+    <script>
+        // JavaScript code to prevent resubmission on reload
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+
+</html>
