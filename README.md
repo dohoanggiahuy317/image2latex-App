@@ -36,5 +36,5 @@ If the model is not functioning correctly, refer to https://github.com/NormXU/no
 
 After downloading, go to `process/run_latex_ocr.py` and update the default parameters from `"Norm/nougat-latex-base"` of HuggingFace to the `path\to\the model\you\downloaded`.
 
-References
+## References
 The Transformers model used in this project is from https://github.com/NormXU/nougat-latex-ocr and https://huggingface.co/Norm/nougat-latex-base.
