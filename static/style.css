@@ -153,8 +153,8 @@ label:hover {
 }
 
 .file-upload-image {
-  max-height: 400px;
-  max-width: 200px;
+  max-height: 1200px;
+  max-width: 600px;
   margin: auto;
   padding: 20px;
 }
@@ -201,7 +201,7 @@ label:hover {
 }
 
 .result_wrapper h2 {
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem 0rem 2rem;
   border-top: dashed white;
   outline: none;
   text-transform: uppercase;
